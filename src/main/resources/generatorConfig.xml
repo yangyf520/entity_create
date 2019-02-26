@@ -2,7 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
     <!-- 数据库驱动 -->
-    <properties resource="jdbc.properties" />
+    <properties resource="application.properties" />
     <!-- 指定数据连接驱动jar地址 -->
     <classPathEntry location="${driverPath}" />
     <context id="context" targetRuntime="MyBatis3">
