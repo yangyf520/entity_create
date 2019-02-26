@@ -27,24 +27,24 @@
         </javaTypeResolver>
         <!-- 生成模型的包名和位置 -->
         <javaModelGenerator targetPackage="${target_package}.model"
-                            targetProject=".\src\main\java">
+                            targetProject="${target_project}">
             <property name="enableSubPackages" value="true" />
-            <property name="trimStrings" value="true" />
+            <property name="trimStrings" value="false" />
         </javaModelGenerator>
         <!-- 生成映射文件的包名和位置 -->
         <sqlMapGenerator targetPackage="${target_package}.mapping"
-                         targetProject=".\src\main\java">
+                         targetProject="${target_project}">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <!-- 生成DAO的包名和位置 -->
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="${target_package}.dao" targetProject=".\src\main\java">
+                             targetPackage="${target_package}.dao" targetProject="${target_project}">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名 -->
         <!--Table中加<property name="modelOnly" value="true" />&lt;!&ndash;只生成class&ndash;&gt;-->
 
-        <table tableName="city" domainObjectName="city" enableCountByExample="false"
+        <table tableName="t_kpi_info" domainObjectName="KpiInfo" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false" >
             <property name="useActualColumnNames" value="true"/>
